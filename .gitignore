@@ -15,6 +15,9 @@
 /log/*.log
 /tmp
 
+# Ignore coverage
+/coverage
+
 # Ignore the secrets.yml, since it contains secrets!
 /config/secrets.yml
 
