@@ -9,6 +9,7 @@ gem "haml"
 
 gem "sass-rails", "~> 4.0.3"
 gem "compass-rails", "~> 1.1.7"
+gem "bootstrap-sass", "~> 3.1.1"
 gem "coffee-rails", "~> 4.0.0"
 gem "jquery-rails"
 gem "uglifier"
