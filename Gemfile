@@ -22,4 +22,5 @@ end
 
 group :test do
   gem "pry-nav"
+  gem "simplecov"
 end
