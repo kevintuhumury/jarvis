@@ -45,8 +45,20 @@ SimpleForm.setup do |config|
     b.use :error, wrap_with: { tag: :span, class: :error }
   end
 
+  config.wrappers :bootstrap, tag: "div", class: "control-group", error_class: "error" do |b|
+    b.use :html5
+    b.use :placeholder
+    b.use :label
+
+    b.wrapper tag: "div", class: "controls" do |ba|
+      ba.use :input
+      ba.use :error, wrap_with: { tag: "span", class: "help-inline" }
+      ba.use :hint,  wrap_with: { tag: "p", class: "help-block" }
+    end
+  end
+
   # The default wrapper to be used by the FormBuilder.
-  config.default_wrapper = :default
+  config.default_wrapper = :bootstrap
 
   # Define the way to render check boxes / radio buttons with labels.
   # Defaults to :nested for bootstrap config.
@@ -55,7 +67,7 @@ SimpleForm.setup do |config|
   config.boolean_style = :nested
 
   # Default class for buttons
-  config.button_class = 'btn'
+  config.button_class = "btn btn-primary"
 
   # Method used to tidy up errors. Specify any Rails Array method.
   # :first lists the first message for each field.
@@ -65,8 +77,11 @@ SimpleForm.setup do |config|
   # Default tag used for error notification helper.
   config.error_notification_tag = :div
 
+  # Default class used for error notification helper.
+  config.error_notification_class = "alert alert-danger"
+
   # CSS class to add for error notification helper.
-  config.error_notification_class = 'alert alert-error'
+  config.error_notification_class = "alert alert-error"
 
   # ID to add for error notification helper.
   # config.error_notification_id = nil
@@ -95,7 +110,7 @@ SimpleForm.setup do |config|
   # config.label_text = lambda { |label, required| "#{required} #{label}" }
 
   # You can define the class to use on all labels. Default is nil.
-  config.label_class = 'control-label'
+  config.label_class = "control-label"
 
   # You can define the class to use on all forms. Default is simple_form.
   # config.form_class = :simple_form
@@ -107,7 +122,7 @@ SimpleForm.setup do |config|
   # config.required_by_default = true
 
   # Tell browsers whether to use the native HTML5 validations (novalidate form option).
-  # These validations are enabled in SimpleForm's internal config but disabled by default
+  # These validations are enabled in SimpleForm"s internal config but disabled by default
   # in this configuration, which is recommended due to some quirks from different browsers.
   # To stop SimpleForm from generating the novalidate option, enabling the HTML5 validations,
   # change this configuration to true.
@@ -134,12 +149,12 @@ SimpleForm.setup do |config|
   # When false, do not use translations for labels.
   # config.translate_labels = true
 
-  # Automatically discover new inputs in Rails' autoload path.
+  # Automatically discover new inputs in Rails" autoload path.
   # config.inputs_discovery = true
 
   # Cache SimpleForm inputs discovery
   # config.cache_discovery = !Rails.env.development?
 
   # Default class for inputs
-  # config.input_class = nil
+  config.input_class = "form-control"
 end
