@@ -1,0 +1,16 @@
+nl:
+  website:
+    title: Jarvis
+  shared:
+    header:
+      root: Jarvis
+      pages: Pagina's
+  pages:
+    index:
+      title: Pagina's
+      edit: Bewerken
+      no_result: Er zijn nog geen pagina's aangemaakt
+    edit:
+      title: Pagina bewerken
+      submit: Opslaan
+      cancel: Annuleren

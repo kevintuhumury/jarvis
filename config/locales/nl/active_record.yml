@@ -1,0 +1,12 @@
+nl:
+  activerecord:
+    models:
+      page:
+        one: Pagina
+        other: Pagina's
+
+    attributes:
+      page:
+        id: ID
+        name: Naam
+        content: Inhoud

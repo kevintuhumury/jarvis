@@ -1,4 +1,4 @@
-require File.expand_path('../boot', __FILE__)
+require File.expand_path("../boot", __FILE__)
 
 # Pick the frameworks you want:
 require "active_model/railtie"
@@ -9,7 +9,7 @@ require "action_view/railtie"
 require "sprockets/railtie"
 
 # Require the gems listed in Gemfile, including any gems
-# you've limited to :test, :development, or :production.
+# you"ve limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
 module Jarvis
@@ -23,10 +23,10 @@ module Jarvis
     config.time_zone = "Amsterdam"
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
-    # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
+    config.i18n.load_path += Dir[Rails.root.join("config", "locales",  "**", "*.{rb,yml}").to_s]
     config.i18n.default_locale = :nl
 
-    # Let's fallback to english when a Dutch translation is missing.
+    # Let"s fallback to english when a Dutch translation is missing.
     config.i18n.fallbacks = [:en]
   end
 end

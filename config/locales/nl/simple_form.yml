@@ -1,0 +1,7 @@
+nl:
+  simple_form:
+    "yes": Ja
+    "no": Nee
+    required:
+      text: verplicht
+      mark: "*"
