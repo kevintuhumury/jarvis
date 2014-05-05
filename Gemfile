@@ -6,6 +6,7 @@ gem "rails", "4.1.0"
 gem "mysql2"
 
 gem "haml"
+gem "simple_form"
 gem "awesome_nested_set", "~> 3.0.0.rc.4"
 
 gem "sass-rails", "~> 4.0.3"
