@@ -27,6 +27,7 @@ end
 
 group :test do
   gem "shoulda-matchers"
+  gem "fabrication"
   gem "pry-nav"
   gem "simplecov"
 end
