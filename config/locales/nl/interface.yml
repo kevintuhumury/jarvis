@@ -4,13 +4,12 @@ nl:
   shared:
     header:
       root: Jarvis
-      pages: Pagina's
+      pages: Content
   pages:
     index:
-      title: Pagina's
+      title: Content
       edit: Bewerken
       no_result: Er zijn nog geen pagina's aangemaakt
     edit:
-      title: Pagina bewerken
       submit: Opslaan
       cancel: Annuleren
