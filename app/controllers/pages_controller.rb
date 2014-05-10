@@ -4,8 +4,4 @@ class PagesController < ApplicationController
     @pages = Page.all
   end
 
-  def edit
-    @page = Page.find params[:id]
-  end
-
 end

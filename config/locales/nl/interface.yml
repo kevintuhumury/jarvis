@@ -9,7 +9,7 @@ nl:
     index:
       title: Content
       edit: Bewerken
-      no_result: Er zijn nog geen pagina's aangemaakt
+      no_result: Er is nog geen content toegevoegd.
     edit:
       submit: Opslaan
       cancel: Annuleren
