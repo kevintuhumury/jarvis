@@ -1,0 +1,11 @@
+%nav.navbar.navbar-default.navbar-fixed-top
+  .navbar-header
+    %a(class="navbar-brand" href="#")= t(".root")
+
+  .navbar-default.navbar-static-side
+    .sidebar-collapse
+      %ul.nav
+        %li
+          = link_to pages_path do
+            %span.glyphicon.glyphicon-file
+            = t(".pages")

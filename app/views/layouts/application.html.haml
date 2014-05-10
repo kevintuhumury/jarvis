@@ -7,4 +7,7 @@
     = csrf_meta_tags
 
   %body(class="#{params[:controller].parameterize}")
-    = yield
+    = render "shared/header"
+
+    .page-wrapper
+      = yield
