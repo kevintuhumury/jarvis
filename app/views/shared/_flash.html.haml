@@ -1,0 +1,4 @@
+- flash.each do |name, message|
+  %div(class="alert alert-#{flash_for(name)}")
+    %a(class="close" data-dismiss="alert") ×
+    = message
