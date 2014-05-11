@@ -35,14 +35,14 @@ describe PagesController do
 
     context "when the page is valid" do
       let(:page_params) do
-        { name: "Contact" }
+        { title: "Contact" }
       end
 
       it "updates the page" do
-        expect(page.name).to eq "Page"
+        expect(page.title).to eq "Page"
 
         update_page
-        expect(page.reload.name).to eq "Contact"
+        expect(page.reload.title).to eq "Contact"
       end
 
       it "redirects to the index page" do
@@ -58,14 +58,14 @@ describe PagesController do
 
     context "when the page is invalid" do
       let(:page_params) do
-        { name: nil }
+        { title: nil }
       end
 
       it "does not update the page" do
-        expect(page.name).to eq "Page"
+        expect(page.title).to eq "Page"
 
         update_page
-        expect(page.reload.name).to eq "Page"
+        expect(page.reload.title).to eq "Page"
       end
 
       it "renders the edite template" do

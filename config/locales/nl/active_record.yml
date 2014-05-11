@@ -8,5 +8,5 @@ nl:
     attributes:
       page:
         id: ID
-        name: Naam
-        content: Inhoud
+        title: Titel
+        body: Inhoud

@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140504142548) do
+ActiveRecord::Schema.define(version: 20140511203638) do
 
   create_table "pages", force: true do |t|
-    t.string   "name"
-    t.text     "content"
+    t.string   "title"
+    t.text     "body"
     t.integer  "parent_id"
     t.integer  "lft"
     t.integer  "rgt"

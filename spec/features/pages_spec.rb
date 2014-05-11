@@ -52,7 +52,7 @@ feature "manage pages" do
       end
 
       within "form" do
-        fill_in "Naam", with: "About"
+        fill_in "Titel", with: "About"
         fill_in "Inhoud", with: "Nullam id dolor id nibh ultricies vehicula ut id elit."
         click_button "Opslaan"
       end
@@ -63,5 +63,4 @@ feature "manage pages" do
       expect(page).not_to have_content "Page"
     end
   end
-
 end
