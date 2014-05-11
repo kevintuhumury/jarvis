@@ -5,7 +5,28 @@ class PagesController < ApplicationController
   end
 
   def edit
-    @page = Page.find params[:id]
+    @page = page
+  end
+
+  def update
+    @page = page
+
+    if @page.update page_params
+      redirect_to pages_path, notice: t(".notice")
+    else
+      flash.now.alert = t(".alert")
+      render :edit
+    end
+  end
+
+  private
+
+  def page
+    Page.find params[:id]
+  end
+
+  def page_params
+    params.require(:page).permit :name, :content
   end
 
 end
