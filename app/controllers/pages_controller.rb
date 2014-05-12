@@ -34,6 +34,16 @@ class PagesController < ApplicationController
     end
   end
 
+  def destroy
+    if page.destroy
+      flash.notice = t(".notice")
+    else
+      flash.alert = t(".alert")
+    end
+
+    redirect_to pages_path
+  end
+
   private
 
   def page

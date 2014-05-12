@@ -9,6 +9,8 @@ nl:
     index:
       title: Pagina's
       edit: Bewerken
+      destroy: Verwijderen
+      destroy_confirm: Weet u zeker dat u deze pagina wilt verwijderen?
       add: Toevoegen
       no_result: Er zijn nog geen pagina's aangemaakt.
     create:
@@ -17,6 +19,9 @@ nl:
     update:
       notice: Pagina is opgeslagen
       alert: Pagina kon niet opgeslagen worden
+    destroy:
+      notice: Pagina is verwijderd
+      alert: Pagina kon niet verwijderd worden
     form:
       submit: Opslaan
       cancel: Annuleren

@@ -77,5 +77,21 @@ feature "manage pages" do
 
       expect(page).not_to have_content "Page"
     end
+
+    scenario "deleting a page" do
+      expect(page).to have_selector "h1", text: "Pagina's"
+
+      within "table" do
+        expect(page).to have_content "Page"
+        expect(page).to have_link "Verwijderen"
+        click_link "Verwijderen"
+      end
+
+      expect(page).to have_content "Pagina is verwijderd"
+
+      within "table" do
+        expect(page).not_to have_content "Page"
+      end
+    end
   end
 end

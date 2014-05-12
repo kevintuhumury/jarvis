@@ -138,4 +138,37 @@ describe PagesController do
     end
   end
 
+  describe "PUT destroy" do
+    let(:destroy_page) { put :destroy, id: page.id }
+
+    context "when the page is destroyed" do
+      it "destroys the page" do
+        expect { destroy_page }.to change { Page.count }.from(2).to 1
+      end
+
+      it "sets a flash notice" do
+        destroy_page
+        expect(flash.notice).to be_present
+      end
+    end
+
+    context "when the page can not be destroyed" do
+      before { allow_any_instance_of(Page).to receive(:destroy).and_return false }
+
+      it "does not destroy the page" do
+        expect { destroy_page }.not_to change { Page.count }
+      end
+
+      it "sets a flash alert" do
+        destroy_page
+        expect(flash.alert).to be_present
+      end
+    end
+
+    it "redirects to the index view" do
+      destroy_page
+      expect(controller).to redirect_to pages_path
+    end
+  end
+
 end
