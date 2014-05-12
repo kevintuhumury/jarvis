@@ -9,10 +9,14 @@ nl:
     index:
       title: Pagina's
       edit: Bewerken
+      add: Toevoegen
       no_result: Er zijn nog geen pagina's aangemaakt.
-    edit:
-      submit: Opslaan
-      cancel: Annuleren
+    create:
+      notice: Pagina is aangemaakt
+      alert: Pagina kon niet aangemaakt worden
     update:
       notice: Pagina is opgeslagen
-      alert: Pagina kon niet worden opgeslagen
+      alert: Pagina kon niet opgeslagen worden
+    form:
+      submit: Opslaan
+      cancel: Annuleren

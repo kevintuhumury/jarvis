@@ -15,6 +15,64 @@ describe PagesController do
     end
   end
 
+  describe "GET new" do
+    let(:assigned) { assigns(:page) }
+
+    before { get :new }
+
+    it "renders the new template" do
+      expect(controller).to render_template :new
+    end
+
+    it "assigns the page" do
+      expect(assigned).to be_a Page
+    end
+  end
+
+  describe "POST create" do
+    let(:create_page) { post :create, page: page_params }
+
+    context "when the page is valid" do
+      let(:page_params) do
+        { title: "Another Title", body: "Cras justo odio, dapibus ac facilisis in, egestas eget quam." }
+      end
+
+      it "creates a new page" do
+        expect { create_page }.to change { Page.count }.from(2).to 3
+      end
+
+      it "redirects to the index page" do
+        create_page
+        expect(controller).to redirect_to pages_path
+      end
+
+      it "sets a flash notice" do
+        create_page
+        expect(flash.notice).to be_present
+      end
+    end
+
+    context "when the page is invalid" do
+      let(:page_params) do
+        { title: nil }
+      end
+
+      it "does not create a new page" do
+        expect { create_page }.not_to change { Page.count }.from(2).to 3
+      end
+
+      it "renders the new template" do
+        create_page
+        expect(controller).to render_template :new
+      end
+
+      it "sets a flash alert" do
+        create_page
+        expect(flash.alert).to be_present
+      end
+    end
+  end
+
   describe "GET edit" do
     let(:assigned)  { assigns(:page) }
     let(:edit_page) { get :edit, id: page.id }

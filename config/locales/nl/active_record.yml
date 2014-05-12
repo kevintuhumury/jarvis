@@ -10,3 +10,7 @@ nl:
         id: ID
         title: Titel
         body: Inhoud
+
+    errors:
+      messages:
+        blank: is verplicht

@@ -4,6 +4,21 @@ class PagesController < ApplicationController
     @pages = Page.all
   end
 
+  def new
+    @page = Page.new
+  end
+
+  def create
+    @page = Page.new page_params
+
+    if @page.save
+      redirect_to pages_path, notice: t(".notice")
+    else
+      flash.now.alert = t(".alert")
+      render :new
+    end
+  end
+
   def edit
     @page = page
   end

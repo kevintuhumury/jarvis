@@ -1,0 +1,7 @@
+= simple_form_for @page do |form|
+  = form.input :title
+  = form.input :body, as: :bootsy, input_html: { rows: 10 }, editor_options: { color: false }
+
+  .action
+    = form.button :submit, t(".submit"), class: "btn btn-primary"
+    = link_to t(".cancel"), :back, class: "cancel"

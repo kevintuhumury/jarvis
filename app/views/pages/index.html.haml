@@ -20,3 +20,7 @@
     - else
       %tr
         %td(colspan="3")= t(".no_result")
+
+= link_to new_page_path, class: "btn btn-primary" do
+  %span.glyphicon.glyphicon-plus-sign
+  = t(".add")

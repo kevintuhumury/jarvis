@@ -31,6 +31,21 @@ feature "manage pages" do
       end
     end
 
+    scenario "creating a new page" do
+      expect(page).not_to have_content "About"
+
+      click_link "Toevoegen"
+
+      within "form" do
+        fill_in "Titel", with: "About"
+        fill_in "Inhoud", with: "Nullam id dolor id nibh ultricies vehicula ut id elit."
+        click_button "Opslaan"
+      end
+
+      expect(page).to have_content "Pagina is aangemaakt"
+      expect(page).to have_content "About"
+    end
+
     scenario "editing a page" do
       expect(page).to have_selector "h1", text: "Pagina's"
 
