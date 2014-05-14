@@ -9,6 +9,7 @@ gem "haml"
 gem "simple_form"
 gem "awesome_nested_set", "~> 3.0.0.rc.4"
 gem "bootsy"
+gem "icheck-rails"
 
 gem "sass-rails", "~> 4.0.3"
 gem "compass-rails", "~> 1.1.7"

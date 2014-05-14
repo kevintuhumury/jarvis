@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.icheck
 //= require bootstrap
 //= require bootsy
 //= require_tree .
