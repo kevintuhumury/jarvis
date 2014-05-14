@@ -5,6 +5,9 @@ nl:
     header:
       root: Jarvis
       pages: Pagina's
+  states:
+    draft: Draft
+    published: Published
   pages:
     index:
       title: Pagina's
