@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140511203638) do
+ActiveRecord::Schema.define(version: 20140513200514) do
 
   create_table "pages", force: true do |t|
     t.string   "title"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20140511203638) do
     t.integer  "rgt"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "state"
   end
 
   add_index "pages", ["lft"], name: "index_pages_on_lft", using: :btree

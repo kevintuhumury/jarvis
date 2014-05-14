@@ -1,5 +1,7 @@
 class Page < ActiveRecord::Base
   acts_as_nested_set
 
-  validates :title, :body, presence: true
+  enum state: [:draft, :published]
+
+  validates :title, :body, :state, presence: true
 end
