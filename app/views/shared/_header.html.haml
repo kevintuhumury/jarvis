@@ -5,8 +5,4 @@
   .navbar-default.navbar-static-side
     .sidebar-collapse
       %ul.nav
-        %li
-          = link_to pages_path do
-            %span.glyphicon.glyphicon-file
-            = t(".pages")
-            %span.badge.pull-right= Page.count
+        = link_to_nav t(".pages"), pages_path, "file", Page.count

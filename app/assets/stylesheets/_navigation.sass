@@ -9,6 +9,25 @@
       border-bottom: 1px solid $dark-blue
       font-family: "Source Sans Pro"
 
+      a
+        color: darken($dark-gray, 25%)
+
+        .badge
+          color: darken($dark-gray, 25%)
+
+        &:hover
+          color: $green
+
+          .badge
+            color: $green
+
+      &.active
+        a
+          color: $green
+
+          .badge
+            color: $green
+
 .navbar-default
   background-color: $light-blue
   border-bottom: 1px solid $dark-blue
