@@ -1,30 +1,35 @@
 .header
   %h1= t(".title")
 
-%table.table.table-striped.table-hover
-  %thead
-    %tr
-      %th= Page.human_attribute_name :id
-      %th= Page.human_attribute_name :title
-      %th &nbsp;
+.panel.panel-default
+  .panel-heading
+    %h3= t(".subtitle")
 
-    - if @pages.present?
-      - @pages.each do |page|
-        %tr[page]
-          %td= page.id
-          %td= page.title
-          %td
-            = link_to edit_page_path(page), class: "btn btn-primary btn-xs" do
-              %span.glyphicon.glyphicon-edit
-              = t(".edit")
+  .panel-body
+    %table.table.table-striped.table-hover
+      %thead
+        %tr
+          %th #
+          %th= Page.human_attribute_name :title
+          %th &nbsp;
 
-            = link_to page_path(page), method: :delete, data: { confirm: t(".destroy_confirm") }, class: "btn btn-primary btn-xs" do
-              %span.glyphicon.glyphicon-minus-sign
-              = t(".destroy")
-    - else
-      %tr
-        %td(colspan="3")= t(".no_result")
+        - if @pages.present?
+          - @pages.each do |page|
+            %tr[page]
+              %td= page.id
+              %td= page.title
+              %td
+                = link_to edit_page_path(page), class: "btn btn-primary btn-xs" do
+                  %span.glyphicon.glyphicon-cog
+                  = t(".edit")
+
+                = link_to page_path(page), method: :delete, data: { confirm: t(".destroy_confirm") }, class: "btn btn-primary btn-xs" do
+                  %span.glyphicon.glyphicon-trash
+                  = t(".destroy")
+        - else
+          %tr
+            %td(colspan="3")= t(".no_result")
 
 = link_to new_page_path, class: "btn btn-primary" do
-  %span.glyphicon.glyphicon-plus-sign
+  %span.glyphicon.glyphicon-plus
   = t(".add")

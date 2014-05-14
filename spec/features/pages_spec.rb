@@ -22,6 +22,7 @@ feature "manage pages" do
 
     scenario "viewing the index page" do
       expect(page).to have_selector "h1", text: "Pagina's"
+      expect(page).to have_selector "h3", text: "Beheer uw pagina's"
 
       within "table" do
         expect(page).not_to have_content "Er zijn nog geen pagina's aangemaakt."
@@ -32,9 +33,15 @@ feature "manage pages" do
     end
 
     scenario "creating a new page" do
+      expect(page).to have_selector "h1", text: "Pagina's"
+      expect(page).to have_selector "h3", text: "Beheer uw pagina's"
+
       expect(page).not_to have_content "About"
 
       click_link "Toevoegen"
+
+      expect(page).to have_selector "h1", text: "Pagina"
+      expect(page).to have_selector "h3", text: "Voeg nieuwe content toe"
 
       within "form" do
         fill_in "Titel", with: "About"
@@ -47,13 +54,17 @@ feature "manage pages" do
     end
 
     scenario "editing a page" do
-      expect(page).to have_selector "h1", text: "Pagina's"
+      expect(page).to have_selector "h1", text: "Pagina"
+      expect(page).to have_selector "h3", text: "Beheer uw pagina's"
 
       within "table" do
         expect(page).to have_content "Page"
         expect(page).to have_link "Bewerken"
         click_link "Bewerken"
       end
+
+      expect(page).to have_selector "h1", text: "Pagina"
+      expect(page).to have_selector "h3", text: "Bewerk uw content"
 
       within "form" do
         expect(page).to have_button "Opslaan"
@@ -65,6 +76,9 @@ feature "manage pages" do
       within "table" do
         click_link "Bewerken"
       end
+
+      expect(page).to have_selector "h1", text: "Pagina"
+      expect(page).to have_selector "h3", text: "Bewerk uw content"
 
       within "form" do
         fill_in "Titel", with: "About"

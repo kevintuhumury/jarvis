@@ -8,14 +8,21 @@ nl:
   pages:
     index:
       title: Pagina's
+      subtitle: Beheer uw pagina's
       edit: Bewerken
       destroy: Verwijderen
       destroy_confirm: Weet u zeker dat u deze pagina wilt verwijderen?
       add: Toevoegen
       no_result: Er zijn nog geen pagina's aangemaakt.
+    new:
+      title: Pagina
+      subtitle: Voeg nieuwe content toe
     create:
       notice: Pagina is aangemaakt
       alert: Pagina kon niet aangemaakt worden
+    edit:
+      title: Pagina
+      subtitle: Bewerk uw content
     update:
       notice: Pagina is opgeslagen
       alert: Pagina kon niet opgeslagen worden

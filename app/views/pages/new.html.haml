@@ -1,1 +1,9 @@
-= render "form"
+.header
+  %h1= t(".title")
+
+.panel.panel-default
+  .panel-heading
+    %h3= t(".subtitle")
+
+  .panel-body
+    = render "form"
