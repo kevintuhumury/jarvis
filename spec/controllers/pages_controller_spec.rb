@@ -34,7 +34,7 @@ describe PagesController do
 
     context "when the page is valid" do
       let(:page_params) do
-        { title: "Another Title", body: "Cras justo odio, dapibus ac facilisis in, egestas eget quam." }
+        { title: "Another Title", body: "Cras justo odio, dapibus ac facilisis in, egestas eget quam.", state: "published" }
       end
 
       it "creates a new page" do

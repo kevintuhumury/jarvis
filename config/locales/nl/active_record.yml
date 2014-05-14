@@ -10,6 +10,7 @@ nl:
         id: ID
         title: Titel
         body: Inhoud
+        state: Status
 
     errors:
       messages:

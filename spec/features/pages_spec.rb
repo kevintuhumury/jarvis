@@ -46,6 +46,7 @@ feature "manage pages" do
       within "form" do
         fill_in "Titel", with: "About"
         fill_in "Inhoud", with: "Nullam id dolor id nibh ultricies vehicula ut id elit."
+        choose "Published"
         click_button "Opslaan"
       end
 
