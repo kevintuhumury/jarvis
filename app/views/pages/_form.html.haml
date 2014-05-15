@@ -1,5 +1,5 @@
 = simple_form_for @page do |form|
-  = form.input :parent_id, as: :select, collection: page_collection_for(@page), prompt: t(".root")
+  = form.input :parent_id, as: :select, collection: page_collection_for(@page), include_blank: t(".root")
   = form.input :title
   = form.input :body, as: :bootsy, input_html: { rows: 10 }, editor_options: { color: false }
   = form.input :state, as: :radio_buttons, collection: page_states_collection
