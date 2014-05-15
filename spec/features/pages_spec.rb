@@ -44,6 +44,8 @@ feature "manage pages" do
       expect(page).to have_selector "h3", text: "Voeg nieuwe content toe"
 
       within "form" do
+        select "Geen bovenliggende pagina"
+
         fill_in "Titel", with: "About"
         fill_in "Inhoud", with: "Nullam id dolor id nibh ultricies vehicula ut id elit."
         choose "Published"

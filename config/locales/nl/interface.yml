@@ -33,5 +33,6 @@ nl:
       notice: Pagina is verwijderd
       alert: Pagina kon niet verwijderd worden
     form:
+      root: Geen bovenliggende pagina
       submit: Opslaan
       cancel: Annuleren
