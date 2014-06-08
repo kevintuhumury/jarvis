@@ -5,6 +5,7 @@ ruby "2.0.0"
 gem "rails", "4.1.1"
 gem "mysql2"
 
+gem "devise"
 gem "haml"
 gem "simple_form"
 gem "awesome_nested_set", "~> 3.0.0.rc.4"
