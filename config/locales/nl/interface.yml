@@ -5,6 +5,7 @@ nl:
     header:
       root: Jarvis
       pages: Pagina's
+      signout: uitloggen
   states:
     draft: Draft
     published: Published
