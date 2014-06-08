@@ -1,0 +1,7 @@
+= simple_form_for resource, as: resource_name, url: session_path(resource_name) do |form|
+  .form-inputs
+    = form.input :email, required: false, autofocus: true, label: false, placeholder: t(".email")
+    = form.input :password, required: false, label: false, placeholder: t(".password")
+
+  .form-actions
+    = form.button :submit, t(".submit")

@@ -2,7 +2,16 @@ require "spec_helper"
 
 feature "manage pages" do
 
-  background { visit root_path }
+  background do
+    Fabricate :admin
+    visit root_path
+
+    within "form" do
+      fill_in "E-mail", with: "tony.stark@starkindustries.com"
+      fill_in "Wachtwoord", with: "iamironman"
+      click_button "Inloggen"
+    end
+  end
 
   context "when there are no pages" do
     scenario "viewing the index page" do

@@ -1,0 +1,19 @@
+!!!
+%html
+  %head
+    %title= t("website.title")
+    = stylesheet_link_tag "application", media: "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+
+  %body(class="#{params[:controller].parameterize}")
+    .row
+      .col-md-3.signin
+        .panel.panel-primary
+          .panel-heading
+            %h3= t(".title")
+
+          .panel-body
+            = render "shared/flash"
+            = t(".description")
+            = yield

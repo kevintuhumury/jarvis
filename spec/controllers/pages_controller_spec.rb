@@ -2,6 +2,8 @@ require "spec_helper"
 
 describe PagesController do
 
+  before { sign_in Fabricate :admin }
+
   let!(:page)         { Fabricate :page }
   let!(:another_page) { Fabricate :page }
 

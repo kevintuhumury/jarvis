@@ -1,0 +1,12 @@
+nl:
+  admin:
+    sessions:
+      new:
+        title: Inloggen
+        email: E-mail
+        password: Wachtwoord
+        submit: Inloggen
+  layouts:
+    signin:
+      title: Jarvis
+      description: Log in om uw content te beheren.
