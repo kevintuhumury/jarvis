@@ -13,11 +13,15 @@
           %th= Page.human_attribute_name :title
           %th &nbsp;
 
+      %tbody
         - if @pages.present?
           - @pages.each do |page|
             %tr[page]
               %td= page.id
-              %td= page.title
+              %td(class="level_#{page.level}")
+                - if page.parent
+                  %span.child
+                = page.title
               %td
                 = link_to edit_page_path(page), class: "btn btn-primary btn-xs" do
                   %span.glyphicon.glyphicon-cog

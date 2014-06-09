@@ -1,0 +1,13 @@
+table
+  tbody
+    tr
+      td
+        @for $count from 2 through 10
+          &.level_#{$count}
+            padding-left: #{($count - 1) * 30}px
+
+        span.child
+          background-image: image-url("child.png")
+          display: inline-block
+          width: 14px
+          height: 14px
