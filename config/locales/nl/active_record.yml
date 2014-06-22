@@ -11,6 +11,8 @@ nl:
         title: Titel
         body: Inhoud
         state: Status
+        menu_title: Menu titel
+        forward_url: Redirect URL
 
     errors:
       messages:
