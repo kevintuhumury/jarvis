@@ -51,7 +51,7 @@ class PagesController < ApplicationController
   end
 
   def page_params
-    params.require(:page).permit :parent_id, :title, :body, :state
+    params.require(:page).permit :parent_id, :title, :body, :state, :menu_title, :forward_url
   end
 
 end

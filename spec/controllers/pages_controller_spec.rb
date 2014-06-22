@@ -36,7 +36,7 @@ describe PagesController do
 
     context "when the page is valid" do
       let(:page_params) do
-        { title: "Another Title", body: "Cras justo odio, dapibus ac facilisis in, egestas eget quam.", state: "published" }
+        { title: "Another Title", body: "Cras justo odio, dapibus ac facilisis in, egestas eget quam.", state: "published", menu_title: "Menu Title", forward_url: "/forward_url" }
       end
 
       it "creates a new page" do

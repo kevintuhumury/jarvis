@@ -35,5 +35,9 @@ nl:
       alert: Pagina kon niet verwijderd worden
     form:
       root: Geen bovenliggende pagina
+      hint:
+        parent_id: Moet deze pagina een subpagina worden? Selecteer hier dan de bovenliggende pagina. Selecteer 'Geen bovenliggende pagina' als dit niet het geval is.
+        menu_title: Is de titel van deze pagina te lang voor in het menu? Geef hier dan een (korte) menu titel op.
+        forward_url: "Geef een URL op waar naar geredirect moet worden bij het aanklikken van het menu item, bijv: 'http://www.google.com'. Let op: de content van deze pagina zal nooit te zien zijn als dit veld is ingevuld."
       submit: Opslaan
       cancel: Annuleren

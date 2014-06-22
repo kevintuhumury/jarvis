@@ -53,16 +53,19 @@ feature "manage pages" do
       expect(page).to have_selector "h3", text: "Voeg nieuwe content toe"
 
       within "form" do
-        select "Geen bovenliggende pagina"
-
-        fill_in "Titel", with: "About"
+        fill_in "Titel", with: "Over ons"
         fill_in "Inhoud", with: "Nullam id dolor id nibh ultricies vehicula ut id elit."
         choose "Published"
+
+        select "Geen bovenliggende pagina"
+        fill_in "Menu titel", with: "About"
+        fill_in "Redirect URL", with: "/redirect_url"
+
         click_button "Opslaan"
       end
 
       expect(page).to have_content "Pagina is aangemaakt"
-      expect(page).to have_content "About"
+      expect(page).to have_content "Over ons"
     end
 
     scenario "editing a page" do
