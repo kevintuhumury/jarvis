@@ -35,6 +35,7 @@ nl:
       alert: Pagina kon niet verwijderd worden
     form:
       root: Geen bovenliggende pagina
+      advanced_options: Geavanceerde opties
       hint:
         parent_id: Moet deze pagina een subpagina worden? Selecteer hier dan de bovenliggende pagina. Selecteer 'Geen bovenliggende pagina' als dit niet het geval is.
         menu_title: Is de titel van deze pagina te lang voor in het menu? Geef hier dan een (korte) menu titel op.
