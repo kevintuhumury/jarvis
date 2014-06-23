@@ -47,7 +47,7 @@ class PagesController < ApplicationController
   private
 
   def page
-    Page.find params[:id]
+    Page.friendly.find params[:id]
   end
 
   def page_params

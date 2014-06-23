@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140620210432) do
+ActiveRecord::Schema.define(version: 20140622205527) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -42,10 +42,12 @@ ActiveRecord::Schema.define(version: 20140620210432) do
     t.integer  "state"
     t.string   "menu_title"
     t.string   "forward_url"
+    t.string   "slug"
   end
 
   add_index "pages", ["lft"], name: "index_pages_on_lft", using: :btree
   add_index "pages", ["parent_id"], name: "index_pages_on_parent_id", using: :btree
   add_index "pages", ["rgt"], name: "index_pages_on_rgt", using: :btree
+  add_index "pages", ["slug"], name: "index_pages_on_slug", using: :btree
 
 end
