@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 ruby "2.1.5"
 
-gem "rails", "4.1.8"
+gem "rails", "4.2.0"
 gem "mysql2"
 
 gem "devise"
@@ -24,6 +24,7 @@ gem "therubyracer"
 
 group :development do
   gem "spring"
+  gem "web-console", "~> 2.0"
 end
 
 group :development, :test do
