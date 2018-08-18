@@ -7,19 +7,29 @@
 # Ignore bundler config.
 /.bundle
 
-# Ignore the default SQLite database.
-/db/*.sqlite3
-/db/*.sqlite3-journal
-
-# Ignore all logfiles and tempfiles.
-/log/*.log
-/tmp
-
-# Ignore coverage
+# Ignore coverage.
 /coverage
 
-# Ignore the secrets.yml, since it contains secrets!
-/config/secrets.yml
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+/vendor/*
+!/log/.keep
+!/tmp/.keep
+!/vendor/.keep
 
-# Ignore the database.yml
+# Ignore uploaded files in development.
+/storage/*
+!/storage/.keep
+
+/node_modules
+/yarn-error.log
+
+/public/assets
+.byebug_history
+
+# Ignore master key for decrypting credentials and more.
+/config/master.key
+
+# Ignore database configuration.
 /config/database.yml

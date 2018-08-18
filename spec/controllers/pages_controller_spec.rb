@@ -1,6 +1,6 @@
-require "spec_helper"
+require "rails_helper"
 
-describe PagesController do
+describe PagesController, type: :controller do
 
   before { sign_in Fabricate :admin }
 
@@ -32,7 +32,7 @@ describe PagesController do
   end
 
   describe "POST create" do
-    let(:create_page) { post :create, page: page_params }
+    let(:create_page) { post :create, params: { page: page_params } }
 
     context "when the page is valid" do
       let(:page_params) do
@@ -60,7 +60,7 @@ describe PagesController do
       end
 
       it "does not create a new page" do
-        expect { create_page }.not_to change { Page.count }.from(2).to 3
+        expect { create_page }.not_to change { Page.count }
       end
 
       it "renders the new template" do
@@ -77,7 +77,7 @@ describe PagesController do
 
   describe "GET edit" do
     let(:assigned)  { assigns(:page) }
-    let(:edit_page) { get :edit, id: page.id }
+    let(:edit_page) { get :edit, params: { id: page.id } }
 
     it "renders the edit template" do
       edit_page
@@ -91,7 +91,7 @@ describe PagesController do
   end
 
   describe "PUT update" do
-    let(:update_page) { put :update, id: page.id, page: page_params }
+    let(:update_page) { put :update, params: { id: page.id, page: page_params } }
 
     context "when the page is valid" do
       let(:page_params) do
@@ -141,7 +141,7 @@ describe PagesController do
   end
 
   describe "PUT destroy" do
-    let(:destroy_page) { put :destroy, id: page.id }
+    let(:destroy_page) { put :destroy, params: { id: page.id } }
 
     context "when the page is destroyed" do
       it "destroys the page" do
