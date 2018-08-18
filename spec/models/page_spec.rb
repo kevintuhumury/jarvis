@@ -1,9 +1,9 @@
-require "spec_helper"
+require "rails_helper"
 
 describe Page do
 
-  it { should validate_presence_of :title }
-  it { should validate_presence_of :body }
-  it { should validate_presence_of :state }
+  it { is_expected.to validate_presence_of :title }
+  it { is_expected.to validate_presence_of :body }
+  it { is_expected.to validate_presence_of :state }
 
 end

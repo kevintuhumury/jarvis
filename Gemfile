@@ -1,40 +1,49 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
+git_source(:github) { |repo| 'https://github.com/#{repo}.git' }
 
-ruby "2.1.5"
+ruby '2.5.1'
 
-gem "rails", "4.2.0"
-gem "mysql2"
+gem 'rails', '~> 5.2.1'
+gem 'puma', '~> 3.11'
+gem 'pg'
 
-gem "devise"
-gem "haml"
-gem "simple_form"
-gem "friendly_id", "~> 5.0.0"
-gem "awesome_nested_set", "~> 3.0.1"
-gem "bootsy"
-gem "icheck-rails"
-gem "newrelic_rpm"
+gem 'devise'
+gem 'haml'
+gem 'simple_form'
+gem 'friendly_id', '~> 5.2.4'
+gem 'awesome_nested_set', '~> 3.1.1'
+gem 'bootsy'
+gem 'icheck-rails'
+gem 'newrelic_rpm'
 
-gem "sass-rails", github: "rails/sass-rails", branch: "4-0-stable"
-gem "compass-rails"
-gem "bootstrap-sass", "~> 3.3.1.0"
-gem "coffee-rails", "~> 4.1.0"
-gem "jquery-rails"
-gem "uglifier"
-gem "therubyracer"
+gem 'sass-rails', '~> 5.0'
+gem 'compass-rails'
+gem 'bootstrap-sass', '~> 3.3.7'
+gem 'coffee-rails', '~> 4.2'
+gem 'jquery-rails'
+gem 'uglifier', '>= 1.3.0'
+gem 'therubyracer'
+
+# Use CoffeeScript for .coffee assets and views
+# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
+gem 'turbolinks', '~> 5'
+
+# Reduces boot times through caching; required in config/boot.rb
+gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development do
-  gem "spring"
-  gem "web-console", "~> 2.0"
+  gem 'listen', '>= 3.0.5', '< 3.2'
 end
 
 group :development, :test do
-  gem "rspec-rails"
+  gem 'rspec-rails'
 end
 
 group :test do
-  gem "shoulda-matchers"
-  gem "fabrication"
-  gem "capybara"
-  gem "pry-nav"
-  gem "simplecov"
+  gem 'rails-controller-testing'
+  gem 'shoulda-matchers'
+  gem 'fabrication'
+  gem 'capybara'
+  gem 'pry-nav'
+  gem 'simplecov'
 end
