@@ -15,5 +15,4 @@
 //= require turbolinks
 //= require bootstrap
 //= require bootsy
-//= require icheck
 //= require_tree .

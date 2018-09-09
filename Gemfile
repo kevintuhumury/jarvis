@@ -13,7 +13,6 @@ gem 'simple_form'
 gem 'friendly_id', '~> 5.2.4'
 gem 'awesome_nested_set', '~> 3.1.1'
 gem 'bootsy'
-gem 'icheck-rails'
 gem 'newrelic_rpm'
 
 gem 'sass-rails', '~> 5.0'
