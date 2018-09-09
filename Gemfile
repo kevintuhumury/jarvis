@@ -17,32 +17,29 @@ gem 'newrelic_rpm'
 
 gem 'sass-rails', '~> 5.0'
 gem 'compass-rails'
-gem 'bootstrap-sass', '~> 3.3.7'
+gem 'bootstrap-sass'
 gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 gem 'uglifier', '>= 1.3.0'
-gem 'therubyracer'
-
-# Use CoffeeScript for .coffee assets and views
-# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
-group :development do
-  gem 'listen', '>= 3.0.5', '< 3.2'
-end
-
 group :development, :test do
   gem 'rspec-rails'
 end
 
+group :development do
+  gem 'listen'
+  gem 'spring'
+  gem 'spring-watcher-listen'
+end
+
 group :test do
-  gem 'rails-controller-testing'
-  gem 'shoulda-matchers'
   gem 'fabrication'
+  gem 'shoulda-matchers'
+  gem 'rails-controller-testing'
   gem 'capybara'
-  gem 'pry-nav'
-  gem 'simplecov'
+  gem 'simplecov', require: false
 end
